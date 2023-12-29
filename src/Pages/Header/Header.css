@@ -1,0 +1,21 @@
+.product-border{
+    border-bottom: 1px solid rgb(0, 0, 0,0.105);
+}
+.bg{
+   width: 15px;
+   height: 15px;
+    border-radius: 50%;
+    color: white;
+    background-color:rgb(143, 65, 38,1)
+}
+.bg-arrow{
+    color: white;
+    background-color:rgb(143, 65, 38,1)
+}
+
+
+/* .cls-1 {
+  fill: none;
+  stroke: #161313;
+  stroke-miterlimit: 10;
+} */

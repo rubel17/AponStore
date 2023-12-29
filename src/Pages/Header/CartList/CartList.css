@@ -1,0 +1,27 @@
+/* .cart-shadow{
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+
+} */
+
+/* .cart-product-body-img{
+    background-color: #E6F9FA;
+} */
+
+.cart-upAndDown{
+    background: #F4FBF8;
+    color: #7209B7;
+}
+.cart-order-btn{
+    color: white;
+    background: rgb(67, 150, 101,1);
+   
+}
+.totalProduct-height-cart{
+    max-height: 640px;
+}
+@media (min-width: 320px) { 
+    .totalProduct-height-cart{
+        max-height: 350px;
+    }
+ }
+

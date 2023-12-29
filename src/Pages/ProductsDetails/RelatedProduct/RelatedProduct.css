@@ -1,0 +1,85 @@
+.group:hover .group-hover\:visible {
+    visibility: visible;
+  }
+
+
+@media only screen and (max-width: 767px) and (min-width: 0px)  {
+    .RelatedTotalProduct{
+        font-size: x-small;
+        width: 137px;
+        height: 210px; 
+        margin-bottom: 10px;
+       border: 1px solid;
+    }
+    .RelatedProductImage{
+        padding: 8px;
+       
+        width: 150px;
+        height: 140px;
+    }
+}
+@media only screen and (max-width: 1023px) and (min-width: 768px)  {
+    .RelatedTotalProduct{
+        width: 230px;
+        height: 280px; 
+       margin-bottom: 15px;
+       border: 1px solid;
+    }
+    .RelatedProductImage{
+        margin-top: 6px;
+        margin-bottom: 6px;
+        width: 150px;
+        height: 150px;
+    }
+ 
+}
+@media only screen and (max-width: 1439px) and (min-width: 1024px)  {
+    .RelatedTotalProduct{
+        font-size:small;
+        width: 270px;
+        height: 325px; 
+        border: 1px solid;
+       
+    }
+    
+    .RelatedProductImage{
+        margin-top: 6px;
+        margin-bottom: 6px;
+        width: 250px;
+        height: 230px;
+    }
+ 
+}
+@media only screen and (max-width: 1919px) and (min-width: 1440px)  {
+    .RelatedTotalProduct{
+        font-size:small;
+        width: 270px;
+        height: 325px; 
+        border: 1px solid;
+       
+    }
+    
+    .RelatedProductImage{
+        margin-top: 6px;
+        margin-bottom: 6px;
+        width: 250px;
+        height: 230px;
+    }
+ 
+}
+@media only screen and (max-width: 2560px) and (min-width: 1920px)  {
+    .RelatedTotalProduct{
+        font-size:small;
+        width: 320px;
+        height: 335px; 
+        border: 1px solid;
+       
+    }
+    
+    .RelatedProductImage{
+        margin-top: 6px;
+        margin-bottom: 6px;
+        width: 300px;
+        height: 240px;
+    }
+}
