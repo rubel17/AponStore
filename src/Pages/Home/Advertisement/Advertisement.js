@@ -3,6 +3,9 @@ import "./Advertisement.css";
 import adv from "../../../assets/image/banner-1.jpg";
 import adv2 from "../../../assets/image/banner-2.jpg";
 import adv3 from "../../../assets/image/banner-3.jpg";
+import adv4 from "../../../assets/image/banner/free Delevery.png";
+import adv5 from "../../../assets/image/banner/discount.png";
+import adv6 from "../../../assets/image/banner/Order to relax.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -33,17 +36,32 @@ const Advertisement = () => {
   };
   return (
     <>
-      <div className="mx-5 my-20">
+      <div className="my-20">
         <Slider {...settings}>
           {/* Your carousel items */}
-          <div className="">
+          <div className="relative overflow-hidden img-group">
             <img className="h-52 w-full" src={adv} alt="" />
+            <img
+              className="absolute secondary-img  h-52 w-full"
+              src={adv4}
+              alt=""
+            />
           </div>
-          <div className="">
+          <div className="relative overflow-hidden img-group2">
             <img className="h-52 w-full ml-3" src={adv2} alt="" />
+            <img
+              className="absolute secondary-img2 h-52 w-full ml-3"
+              src={adv5}
+              alt=""
+            />
           </div>
-          <div>
-            <img className="h-52 w-full ml-6" src={adv3} alt="" />
+          <div className="relative overflow-hidden img-group3 ml-3">
+            <img className="h-52 w-full " src={adv3} alt="" />
+            <img
+              className="absolute secondary-img3  h-52 w-full"
+              src={adv6}
+              alt=""
+            />
           </div>
         </Slider>
       </div>

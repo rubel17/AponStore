@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./ProductsDetails.css";
 import cocola from "../../assets/image/cocola-chicken.webp";
 import cocola2 from "../../assets/image/cocola-chicken2.webp";
-import downArrow from "../../assets/icon/dwonArrow.png";
 import mrNoodles from "../../assets/image/mr-noodles.webp";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -20,109 +19,37 @@ import Description from "./Description/Description";
 import Reviews from "./Reviews/Reviews";
 import ShippingAndDelivery from "./ShippingAndDelivery/ShippingAndDelivery";
 
-const products = [
-  // List of products
-  // Each product can be an object with properties like id, name, description, image, etc.
-  {
-    id: 1,
-    name: "Product 1",
-    description: "Description 1",
-    img: "https://i0.wp.com/www.farmersbestbd.com/wp-content/uploads/2020/08/WESS01-500-.png?w=386&ssl=1",
-  },
-  {
-    id: 2,
-    name: "Product 2",
-    description: "Description 2",
-    img: "https://chaldn.com/_mpimage/nestle-nido-1-growing-up-milk-powder-1-3-y-350-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D112646&q=best&v=1&m=400&webp=1",
-  },
-  {
-    id: 3,
-    name: "Product 3",
-    description: "Description 3",
-    img: "https://chaldn.com/_mpimage/nestle-cerelac-4-apple-corn-flakes-12-m-350-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D139068&q=best&v=1&m=400&webp=1",
-  },
-  {
-    id: 4,
-    name: "Product 4",
-    description: "Description 4",
-    img: "https://chaldn.com/_mpimage/heinz-parsnip-carrot-sweet-potato-4-6-months-110-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D98203&q=best&v=1&m=400&m=400&webp=1",
-  },
-  {
-    id: 5,
-    name: "Product 4",
-    description: "Description 4",
-    img: "https://chaldn.com/_mpimage/ensure-plus-drink-powder-vanilla-flavour-400-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D108646&q=best&v=1&m=400&m=400&webp=1",
-  },
-  { id: 6, name: "Product 4", description: "Description 4" },
-  { id: 7, name: "Product 4", description: "Description 4" },
-  { id: 8, name: "Product 4", description: "Description 4" },
-  { id: 9, name: "Product 4", description: "Description 4" },
-  { id: 10, name: "Product 4", description: "Description 4" },
-  { id: 11, name: "Product 4", description: "Description 4" },
-  { id: 12, name: "Product 4", description: "Description 4" },
-  { id: 13, name: "Product 4", description: "Description 4" },
-  { id: 14, name: "Product 4", description: "Description 4" },
-  { id: 15, name: "Product 4", description: "Description 4" },
-  {
-    id: 16,
-    name: "Product 4",
-    description: "Description 4",
-    img: "https://chaldn.com/_mpimage/rohs-fingertip-pulse-oximeter-1-pcs?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D60782&q=best&v=1&m=400&webp=1",
-  },
-  {
-    id: 17,
-    name: "Product 4",
-    description: "Description 4",
-    img: "https://chaldn.com/_mpimage/fogg-body-spray-fresh-fougere-120-ml?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D71842&q=best&v=1&m=400&webp=1",
-  },
-  { id: 18, name: "Product 4", description: "Description 4" },
-  { id: 19, name: "Product 4", description: "Description 4" },
-  { id: 20, name: "Product 4", description: "Description 4" },
-  { id: 21, name: "Product 4", description: "Description 4" },
-  { id: 22, name: "Product 4", description: "Description 4" },
-  { id: 23, name: "Product 4", description: "Description 4" },
-  { id: 24, name: "Product 4", description: "Description 4" },
-  { id: 25, name: "Product 4", description: "Description 4" },
-  { id: 26, name: "Product 4", description: "Description 4" },
-  { id: 27, name: "Product 4", description: "Description 4" },
-  { id: 28, name: "Product 4", description: "Description 4" },
-  { id: 29, name: "Product 4", description: "Description 4" },
-  {
-    id: 30,
-    name: "Product 4",
-    description: "Description 4",
-    img: "https://chaldn.com/_mpimage/ensure-plus-drink-powder-vanilla-flavour-400-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D108646&q=best&v=1&m=400&m=400&webp=1",
-  },
-  {
-    id: 31,
-    name: "Product 4",
-    description: "Description 4",
-    img: "https://chaldn.com/_mpimage/m2-sensation-strawberry-dotted-condoms-3-pcs?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D61668&q=best&v=1&m=400&webp=1",
-  },
-  // ... add more products
-];
-
 const ProductsDetails = () => {
-  //   const { user } = useContext(AuthContext);
-  // const productDetail = useLoaderData({});
-  //   const { data: relatedProducts = [], refetch } = useQuery({
-  //     queryKey: [`allProduct/category`],
-  //     queryFn: () =>
-  //       fetch(
-  //         `https://y-rubelrk.vercel.app/allProduct/${productDetail?.category}`
-  //       ).then((res) => res.json()),
-  //   });
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const productDetail = useLoaderData({});
+  // console.log(productDetail);
+  const {
+    images,
+    Descriptio,
+    OutOfStock,
+    Review,
+    Tags,
+    categories,
+    name,
+    regularPrice,
+    sellPrice,
+    subcategories,
+    weight,
+    _id,
+  } = productDetail;
 
   const [isDescription, setIsDescription] = useState(false);
   const [isReviews, setIsReviews] = useState(false);
   const [isShippingDelivery, setIsShippingDelivery] = useState(false);
   const [descriptionColor, setDescriptionColor] = useState(false);
   return (
-    <div>
+    <div className="AP-container">
       {/* product information */}
       <div className="xl:flex">
-        <div className="xl:w-1/3 mx-auto">
-          <div className="">
+        <div className="md:w-2/5 xl:w-1/3 mx-auto">
+          <div>
             <Carousel
               showArrows={true}
               showThumbs={true}
@@ -132,6 +59,9 @@ const ProductsDetails = () => {
               stopOnHover={true}
               showStatus={false}
             >
+              <div>
+                <img src={images} alt="" />
+              </div>
               <div>
                 <img src={cocola} alt="" />
               </div>
@@ -148,10 +78,11 @@ const ProductsDetails = () => {
         <div className="xl:w-1/2 ml-4 mb-6">
           <div className="text-start">
             <h1 className="text-3xl font-medium my-5">
-              Mr. Noodles Korean Super Spicy 496 gm
+              {name || "Mr. Noodles Korean Super Spicy 496 gm"}
             </h1>
             <h3 className="text-orange-900 text-2xl font-semibold mb-4">
-              180.00৳
+              {sellPrice || " 180.00৳"}
+              <span>.00 ৳</span>
             </h3>
             <div className="flex items-center mb-4">
               <div className="flex items-center">
@@ -248,13 +179,13 @@ const ProductsDetails = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <rect width="48" height="48" fill="white" fill-opacity="0.01" />
+                <rect width="48" height="48" fill="white" fillOpacity="0.01" />
                 <path
                   d="M13 30L25 18L37 30"
                   stroke="#000000"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             ) : (
@@ -265,13 +196,13 @@ const ProductsDetails = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <rect width="48" height="48" fill="white" fill-opacity="0.01" />
+                <rect width="48" height="48" fill="white" fillOpacity="0.01" />
                 <path
                   d="M37 18L25 30L13 18"
                   stroke="#000000"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             )}
@@ -295,13 +226,13 @@ const ProductsDetails = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <rect width="48" height="48" fill="white" fill-opacity="0.01" />
+                <rect width="48" height="48" fill="white" fillOpacity="0.01" />
                 <path
                   d="M13 30L25 18L37 30"
                   stroke="#000000"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             ) : (
@@ -312,13 +243,13 @@ const ProductsDetails = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <rect width="48" height="48" fill="white" fill-opacity="0.01" />
+                <rect width="48" height="48" fill="white" fillOpacity="0.01" />
                 <path
                   d="M37 18L25 30L13 18"
                   stroke="#000000"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             )}
@@ -342,13 +273,13 @@ const ProductsDetails = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <rect width="48" height="48" fill="white" fill-opacity="0.01" />
+                <rect width="48" height="48" fill="white" fillOpacity="0.01" />
                 <path
                   d="M13 30L25 18L37 30"
                   stroke="#000000"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             ) : (
@@ -359,13 +290,13 @@ const ProductsDetails = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <rect width="48" height="48" fill="white" fill-opacity="0.01" />
+                <rect width="48" height="48" fill="white" fillOpacity="0.01" />
                 <path
                   d="M37 18L25 30L13 18"
                   stroke="#000000"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             )}
@@ -384,7 +315,7 @@ const ProductsDetails = () => {
           <div className="lg:flex justify-center mb-2  ml-5 lg:ml-0">
             <p>
               <Link
-                to={`/productDetails/${products[1]?.id}`}
+                // to={`/productDetails/${products[1]?.id}`}
                 className=" xl:mr-28 pr-2 hover:border-b-2 xl:pb-2.5 hover:border-b-orange-900 border-b-2 xl:border-b-0"
               >
                 Description
@@ -393,7 +324,7 @@ const ProductsDetails = () => {
 
             <p className="mb-3 lg:mb-0">
               <Link
-                to={`/productDetails/${products[1]}/reviews`}
+                // to={`/productDetails/${products[1]}/reviews`}
                 className="xl:mr-28 pr-2 hover:border-b-2 xl:pb-2.5 hover:border-b-orange-900 border-b-2 lg:border-b-0 active:border-b-2"
               >
                 Reviews
@@ -402,7 +333,7 @@ const ProductsDetails = () => {
 
             <p>
               <Link
-                to={`/productDetails/${products[1]}/shipping`}
+                // to={`/productDetails/${products[1]}/shipping`}
                 className="hover:border-b-2 xl:pb-2.5 hover:border-b-orange-900 border-b-2 lg:border-b-0"
               >
                 Shipping & Delivery

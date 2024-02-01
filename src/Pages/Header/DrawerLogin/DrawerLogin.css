@@ -1,0 +1,20 @@
+.login-page{
+    width: 500px;
+    height: 947px;
+}
+.login-text{
+    margin-top: 22px;
+    margin-bottom: 25px;
+}
+.remember{
+color:#84B59F;
+}
+.btn-login{
+background-color: #7209B7;
+font-weight: 700;
+}
+.btn-google{
+    width: 388px;
+    background-color: #79ACFF;
+    margin-bottom: 61px;
+}

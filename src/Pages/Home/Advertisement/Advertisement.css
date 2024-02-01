@@ -1,0 +1,29 @@
+
+.secondary-img{
+    top: 0;
+    left: 0;
+    transition: .5s;
+    transform: translateX(-100%);
+}
+.img-group:hover .secondary-img{
+    transform: translateX(0);
+}
+.secondary-img2{
+    top: 0;
+    left: 0;
+    transition: .5s;
+    transform: translateY(-100%);
+}
+.img-group2:hover .secondary-img2{
+    transform: translateY(0);
+}
+
+.secondary-img3{
+    top: 0;
+    left: 0;
+    transition: .5s;
+    transform: translateX(100%);
+}
+.img-group3:hover .secondary-img3{
+    transform: translateX(0);
+}

@@ -1,0 +1,115 @@
+@media only screen and (max-width: 767px) and (min-width: 0px)  {
+    .productCategory{
+        font-size: x-small;
+        width: 90%;
+        height: 210px; 
+        margin-bottom: 10px;
+        border: 1px solid;
+    
+    }
+    .productCategoryImage{
+        width: 95%;
+        height: 140px;
+    }
+    .SH-button-position{
+        right: 22%;
+    }
+}
+@media only screen and (max-width: 1023px) and (min-width: 768px)  {
+    .productCategory{
+        width: 90%;
+        height: 270px; 
+       border: 1px solid;
+       margin-bottom: 5px;
+
+    }
+    .productCategoryImage{
+        width: 90%;
+        height: 170px;
+    }
+    .SH-button-position{
+        right: 22%;
+    }
+}
+@media only screen and (max-width: 1279px) and (min-width: 1024px)  {
+    .productCategory{
+        width: 90%;
+        height: 280px; 
+       border: 1px solid;
+       margin-bottom: 8px;
+
+    }
+    .productCategoryImage{
+        width: 90%;
+        height: 170px;
+    }
+    .SH-button-position{
+        right: 23%;
+
+    }
+
+}
+
+@media only screen and (max-width: 1439px) and (min-width: 1280px) {
+    .productCategory{
+        width: 90%;
+        height: 280px; 
+       border: 1px solid;
+       margin-bottom: 8px;
+
+    }
+    .productCategoryImage{
+        width: 90%;
+        height: 180px;
+    }
+    .SH-button-position{
+        right: 27%;
+        transition: .3s;
+        transform: translateY(100%);
+    }
+    .productCategory:hover  .SH-button-position{
+        transform: translateY(0);
+    }
+}
+@media only screen and (max-width: 1919px) and (min-width: 1440px)  {
+    .productCategory{
+        width: 90%;
+        height: 350px; 
+       border: 1px solid;
+    }
+    .productCategoryImage{
+        margin-top: 10px;
+        background-color: white;
+        width: 95%;
+        height: 240px;
+    }
+    .SH-button-position{
+        right: 47%;
+        transition: .3s;
+        transform: translateY(100%);
+    }
+    .productCategory:hover  .SH-button-position{
+        transform: translateY(0);
+    }
+}
+@media only screen and (max-width: 6000px) and (min-width: 1920px)  {
+    .productCategory{
+        width: 90%;
+        height: 380px; 
+       border: 1px solid;
+    }
+    .productCategoryImage{
+        margin-top: 10px;
+        background-color: white;
+        width: 95%;
+        height: 260px;
+    }
+    .SH-button-position{
+        right: 47%;
+        transition: .3s;
+        transform: translateY(100%);
+    }
+    .productCategory:hover  .SH-button-position{
+        transform: translateY(0);
+    }
+}

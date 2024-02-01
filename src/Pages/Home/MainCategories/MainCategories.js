@@ -20,12 +20,12 @@ const MainCategories = () => {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2,
+      items: 3,
       slidesToSlide: 3,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1,
+      items: 2,
       slidesToSlide: 2,
     },
   };
@@ -60,70 +60,105 @@ const MainCategories = () => {
           {/* Add carousel items here */}
           <div className=" flex  flex-col items-center">
             <img className="h-20 w-20" src={PremiumProductIcon} alt="" />
-            <Link className="text-medium font-semibold">PREMIUM PRODUCTS</Link>
+            <Link
+              to="/Shop/Premium-Products"
+              className="text-medium font-semibold"
+            >
+              PREMIUM PRODUCTS
+            </Link>
             <p className="text-gray-400 text-sm">
               <span>28</span> products
             </p>
           </div>
           <div className=" flex  flex-col items-center">
             <img className="h-20 w-20" src={BabyProductIcon} alt="" />
-            <Link className="text-medium font-semibold">BABY PRODUCTS</Link>
+            <Link
+              to="/Shop/Baby-Products"
+              className="text-medium font-semibold"
+            >
+              BABY PRODUCTS
+            </Link>
             <p className="text-gray-400 text-sm">
               <span>28</span> products
             </p>
           </div>
           <div className=" flex  flex-col items-center">
             <img className="h-20 w-20" src={DailyProductIcon} alt="" />
-            <Link className="text-medium font-semibold">DAILY NEEDS</Link>
+            <Link to="/Shop/Daily-Needs" className="text-medium font-semibold">
+              DAILY NEEDS
+            </Link>
             <p className="text-gray-400 text-sm">
               <span>28</span> products
             </p>
           </div>
           <div className=" flex  flex-col items-center">
             <img className="h-20 w-20" src={DryProductIcon} alt="" />
-            <Link className="text-medium font-semibold">DRY FOODS</Link>
+            <Link to="/Shop/Dry-Product" className="text-medium font-semibold">
+              DRY FOODS
+            </Link>
             <p className="text-gray-400 text-sm">
               <span>28</span> products
             </p>
           </div>
           <div className=" flex  flex-col items-center">
             <img className="h-20 w-20" src={StationeryIcon} alt="" />
-            <Link className="text-medium font-semibold">STATIONERY</Link>
+            <Link to="/Shop/Stationery" className="text-medium font-semibold">
+              STATIONERY
+            </Link>
             <p className="text-gray-400 text-sm">
               <span>28</span> products
             </p>
           </div>
           <div className=" flex  flex-col items-center">
             <img className="h-20 w-20" src={ShoppingCart} alt="" />
-            <Link className="text-medium font-semibold">Shopping Cart</Link>
+            <Link to="/Shop/Stationery" className="text-medium font-semibold">
+              Shopping Cart
+            </Link>
             <p className="text-gray-400 text-sm">
               <span>28</span> products
             </p>
           </div>
           <div className=" flex  flex-col items-center">
             <img className="h-20 w-20" src={PremiumProductIcon} alt="" />
-            <Link className="text-medium font-semibold">PREMIUM PRODUCTS</Link>
+            <Link to="/Shop/Stationery" className="text-medium font-semibold">
+              PREMIUM PRODUCTS
+            </Link>
             <p className="text-gray-400 text-sm">
               <span>28</span> products
             </p>
           </div>
           <div className=" flex  flex-col items-center">
             <img className="h-20 w-20" src={HygieneProductIcon} alt="" />
-            <Link className="text-medium font-semibold">HYGIENE PRODUCTS</Link>
+            <Link
+              to="/Shop/Hygiene-Product"
+              className="text-medium font-semibold"
+            >
+              HYGIENE PRODUCTS
+            </Link>
             <p className="text-gray-400 text-sm">
               <span>28</span> products
             </p>
           </div>
           <div className=" flex  flex-col items-center">
             <img className="h-20 w-20" src={PremiumProductIcon} alt="" />
-            <Link className="text-medium font-semibold">PREMIUM PRODUCTS</Link>
+            <Link
+              to="/Shop/Hygiene-Product"
+              className="text-medium font-semibold"
+            >
+              PREMIUM PRODUCTS
+            </Link>
             <p className="text-gray-400 text-sm">
               <span>28</span> products
             </p>
           </div>
           <div className=" flex  flex-col items-center">
             <img className="h-20 w-20" src={HygieneProductIcon} alt="" />
-            <Link className="text-medium font-semibold">PREMIUM PRODUCTS</Link>
+            <Link
+              to="/Shop/Hygiene-Product"
+              className="text-medium font-semibold"
+            >
+              PREMIUM PRODUCTS
+            </Link>
             <p className="text-gray-400 text-sm">
               <span>28</span> products
             </p>

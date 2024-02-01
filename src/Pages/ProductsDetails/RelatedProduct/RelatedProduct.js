@@ -69,7 +69,7 @@ const RelatedProduct = ({ text = "Complan Chocolate" }) => {
                 title="ACI Pure Chickpea Flour"
               />
               {/* hover button */}
-              <div className="absolute top-1/3 left-3.5 md:left-12 xl:left-1/4 2xl:left-1/4 invisible group-hover:visible">
+              <div className="absolute top-1/3 H-button-position xl:invisible group-hover:visible">
                 <div className="flex  bg-gray-300">
                   <button className="m-2">
                     <svg
@@ -134,7 +134,7 @@ const RelatedProduct = ({ text = "Complan Chocolate" }) => {
                 title="ACI Pure Chickpea Flour"
               />
               {/* hover button */}
-              <div className="absolute top-1/3 left-3.5 md:left-12 xl:left-1/4 2xl:left-1/4 invisible group-hover:visible">
+              <div className="absolute top-1/3 H-button-position xl:invisible group-hover:visible">
                 <div className="flex  bg-gray-300">
                   <button className="m-2">
                     <svg
@@ -199,7 +199,7 @@ const RelatedProduct = ({ text = "Complan Chocolate" }) => {
                 title="ACI Pure Chickpea Flour"
               />
               {/* hover button */}
-              <div className="absolute top-1/3 left-3.5 md:left-12 xl:left-1/4 2xl:left-1/4 invisible group-hover:visible">
+              <div className="absolute top-1/3 H-button-position xl:invisible group-hover:visible">
                 <div className="flex  bg-gray-300">
                   <button className="m-2">
                     <svg
@@ -264,7 +264,7 @@ const RelatedProduct = ({ text = "Complan Chocolate" }) => {
                 title="ACI Pure Chickpea Flour"
               />
               {/* hover button */}
-              <div className="absolute top-1/3 left-3.5 md:left-12 xl:left-1/4 2xl:left-1/4 invisible group-hover:visible">
+              <div className="absolute top-1/3 H-button-position xl:invisible group-hover:visible">
                 <div className="flex  bg-gray-300">
                   <button className="m-2">
                     <svg
@@ -329,7 +329,7 @@ const RelatedProduct = ({ text = "Complan Chocolate" }) => {
                 title="ACI Pure Chickpea Flour"
               />
               {/* hover button */}
-              <div className="absolute top-1/3 left-3.5 md:left-12 xl:left-1/4 2xl:left-1/4 invisible group-hover:visible">
+              <div className="absolute top-1/3 H-button-position xl:invisible group-hover:visible">
                 <div className="flex  bg-gray-300">
                   <button className="m-2">
                     <svg
@@ -394,7 +394,7 @@ const RelatedProduct = ({ text = "Complan Chocolate" }) => {
                 title="ACI Pure Chickpea Flour"
               />
               {/* hover button */}
-              <div className="absolute top-1/3 left-3.5 md:left-12 xl:left-1/4 2xl:left-1/4 invisible group-hover:visible">
+              <div className="absolute top-1/3 H-button-position xl:invisible group-hover:visible">
                 <div className="flex  bg-gray-300">
                   <button className="m-2">
                     <svg
@@ -459,7 +459,7 @@ const RelatedProduct = ({ text = "Complan Chocolate" }) => {
                 title="ACI Pure Chickpea Flour"
               />
               {/* hover button */}
-              <div className="absolute top-1/3 left-3.5 md:left-12 xl:left-1/4 2xl:left-1/4 invisible group-hover:visible">
+              <div className="absolute top-1/3 H-button-position xl:invisible group-hover:visible">
                 <div className="flex  bg-gray-300">
                   <button className="m-2">
                     <svg
@@ -524,7 +524,7 @@ const RelatedProduct = ({ text = "Complan Chocolate" }) => {
                 title="ACI Pure Chickpea Flour"
               />
               {/* hover button */}
-              <div className="absolute top-1/3 left-3.5 md:left-12 xl:left-1/4 2xl:left-1/4 invisible group-hover:visible">
+              <div className="absolute top-1/3 H-button-position xl:invisible group-hover:visible">
                 <div className="flex  bg-gray-300">
                   <button className="m-2">
                     <svg
@@ -589,7 +589,7 @@ const RelatedProduct = ({ text = "Complan Chocolate" }) => {
                 title="ACI Pure Chickpea Flour"
               />
               {/* hover button */}
-              <div className="absolute top-1/3 left-3.5 md:left-12 xl:left-1/4 2xl:left-1/4 invisible group-hover:visible">
+              <div className="absolute top-1/3 H-button-position xl:invisible group-hover:visible">
                 <div className="flex  bg-gray-300">
                   <button className="m-2">
                     <svg
@@ -654,7 +654,7 @@ const RelatedProduct = ({ text = "Complan Chocolate" }) => {
                 title="ACI Pure Chickpea Flour"
               />
               {/* hover button */}
-              <div className="absolute top-1/3 left-3.5 md:left-12 xl:left-1/4 2xl:left-1/4 invisible group-hover:visible">
+              <div className="absolute top-1/3 H-button-position xl:invisible group-hover:visible">
                 <div className="flex  bg-gray-300">
                   <button className="m-2">
                     <svg
@@ -719,7 +719,7 @@ const RelatedProduct = ({ text = "Complan Chocolate" }) => {
                 title="ACI Pure Chickpea Flour"
               />
               {/* hover button */}
-              <div className="absolute top-1/3 left-3.5 md:left-12 xl:left-1/4 2xl:left-1/4 invisible group-hover:visible">
+              <div className="absolute top-1/3 H-button-position xl:invisible group-hover:visible">
                 <div className="flex  bg-gray-300">
                   <button className="m-2">
                     <svg
@@ -784,7 +784,7 @@ const RelatedProduct = ({ text = "Complan Chocolate" }) => {
                 title="ACI Pure Chickpea Flour"
               />
               {/* hover button */}
-              <div className="absolute top-1/3 left-3.5 md:left-12 xl:left-1/4 2xl:left-1/4 invisible group-hover:visible">
+              <div className="absolute top-1/3 H-button-position xl:invisible group-hover:visible">
                 <div className="flex  bg-gray-300">
                   <button className="m-2">
                     <svg

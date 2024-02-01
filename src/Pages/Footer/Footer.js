@@ -17,7 +17,7 @@ const Footer = () => {
     console.log("Searching for:", searchTerm);
   };
   return (
-    <div className="footer-bg my-10">
+    <div className="footer-bg my-10 AP-container">
       <footer className="py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mx-3 md:mx-10">
         <div className="text-start">
           <span className="text-lg font-bold">ADDRESS</span>
@@ -31,27 +31,35 @@ const Footer = () => {
           <span className="text-lg font-bold">OUR PRODUCTS</span>
           <div className="text-lg text-gray-500 mt-3">
             <p>
-              <Link to="/">Baby Product</Link>
+              <Link to="/Shop/Baby-Products">Baby Product</Link>
             </p>
             <p className="py-3">
-              <Link to="/shop">Daily Needs</Link>
+              <Link to="/Shop/Daily-Needs">Daily Needs</Link>
             </p>
             <p>
-              <Link to="/blog">Stationary</Link>
+              <Link to="/Shop/Stationery">Stationary</Link>
             </p>
 
             <p className="py-3">
-              <Link to="/allProduct/clearanceSale">Hygiene Products</Link>
+              <Link to="/Shop/Hygiene-Product">Hygiene Products</Link>
             </p>
           </div>
         </div>
         <div className=" text-start">
           <span className="text-lg font-bold">USEFUL LINKS</span>
           <div className="text-start text-lg text-gray-500 mt-3">
-            <p>About</p>
-            <p className="py-4">Contact Us</p>
-            <p className="pb-4">Terms & Conditions</p>
-            <p>FAQ</p>
+            <p className="mt-3">
+              <Link to="/about">About</Link>
+            </p>
+            <p className="mt-3">
+              <Link to="/contact-us">Contact Us</Link>
+            </p>
+            <p className="mt-3">
+              <Link to="/terms-and-conditions">Terms & Conditions</Link>
+            </p>
+            <p className="mt-3">
+              <Link to="/faq">FAQ</Link>
+            </p>
           </div>
         </div>
         <div className=" text-start">
@@ -78,36 +86,36 @@ const Footer = () => {
         </div>
       </footer>
       <hr />
-      <div className="lg:flex mt-4  mb-5">
-        <div className="lg:w-1/2 mb-7 text-left ml-4 lg:ml-16 font-semibold">
+      <div className="lg:flex justify-between my-4 mx-3 md:mx-10">
+        <div className="mb-7 text-left  font-semibold">
           <p>Payment System:</p>
-          <div className="w-72 md:w-96">
+          <div className="w-72 md:w-96 -ml-4">
             <img src={paymentSystem} alt="" />
           </div>
         </div>
-        <div className="lg:w-1/2 font-semibold text-left ml-4 md:ml-0">
-          <p>Our Social Links:</p>
-          <div className="w-1/2 grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-2 ml-4 mt-4">
+        <div className="md:w-1/2 lg:w-1/3 xl:w-1/4 font-semibold text-left">
+          <p className="xl:ml-5">Our Social Links:</p>
+          <div className="w-68 xl:ml-5  gap-1 grid grid-cols-7  mt-4">
             <Link to="https://www.facebook.com/" target="_blank">
-              <img className="w-10 h-10" src={facebook} alt="" />
+              <img className="w-8 h-8" src={facebook} alt="" />
             </Link>
             <Link to="https://www.linkedin.com/" target="_blank">
-              <img className="w-10 h-10" src={Linkedin} alt="" />
+              <img className="w-8 h-8" src={Linkedin} alt="" />
             </Link>
             <Link to="https://twitter.com/" target="_blank">
-              <img className="w-10 h-10" src={Twitter} alt="" />
+              <img className="w-8 h-8" src={Twitter} alt="" />
             </Link>
             <Link to="https://www.instagram.com/" target="_blank">
-              <img className="w-10 h-10" src={instagram} alt="" />
+              <img className="w-8 h-8" src={instagram} alt="" />
             </Link>
             <Link to="https://www.pinterest.com/" target="_blank">
-              <img className="w-10 h-10" src={pinterest} alt="" />
+              <img className="w-8 h-8" src={pinterest} alt="" />
             </Link>
             <Link to="https://www.pinterest.com/" target="_blank">
-              <img className="w-10 h-10" src={Youtube} alt="" />
+              <img className="w-8 h-8" src={Youtube} alt="" />
             </Link>
             <Link to="https://www.pinterest.com/" target="_blank">
-              <img className="w-10 h-10" src={tiktok} alt="" />
+              <img className="w-8 h-8" src={tiktok} alt="" />
             </Link>
           </div>
         </div>

@@ -1,0 +1,79 @@
+.container{
+    width: 100% !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    max-width: 100% !important;
+}
+.order-body{
+    width: 50%;
+    margin: auto;
+}
+
+.product-height{
+    height: 385px;
+}
+.CO-product-height{
+    height: 200px;
+}
+
+.checkbox-round {
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox-round:checked {
+    background-color: blue;
+}
+
+
+
+@media only screen and (max-width: 767px) and (min-width: 320px)  {
+
+    .cart-text{
+        left: 20%;
+    }
+    .order-body{
+        width: 95%;
+    }
+}
+@media only screen and (max-width: 1023px) and (min-width: 768px)  {
+    .cart-text{
+        left: 35%;
+    }
+}
+@media only screen and (max-width: 1279px) and (min-width: 1024px)  {
+    .cart-text{
+        left: 15%;
+    }
+}
+@media only screen and (max-width: 1535px) and (min-width: 1280px)  {
+    .cart-text{
+        left: 20%;
+    }
+}
+@media only screen and (max-width: 6000px) and (min-width: 1536px)  {
+    .cart-text{
+        left: 25%;
+    }
+}
+
+.product-details{
+    background-color: white;
+}
+.checkOut-order-btn{
+    color: white;
+    background: #84B59F;
+    border-radius: 2px;
+}
+
+
+
+
