@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
+import { useQuery } from "@tanstack/react-query";
 
 const AccountDetails = () => {
+  const { user } = useContext(AuthContext);
+  const { data: MDBuser = [] } = useQuery({
+    queryKey: [`MDuser`],
+    queryFn: () =>
+      fetch(
+        ` https://apon-store-server-rubelrk.vercel.app/users/${user?.email}`
+      ).then((res) => res.json()),
+  });
   return (
     <div className="w-52 md:w-11/12 mt-8">
       <div className="px-8 rounded  w-full">
@@ -13,6 +23,7 @@ const AccountDetails = () => {
                   First Name <span className="text-orange-800">*</span>
                 </label>
                 <input
+                  defaultValue={user?.displayName || MDBuser?.name}
                   id="name"
                   type="text"
                   className="mt-1 p-2 w-full border bg-white"
@@ -21,7 +32,7 @@ const AccountDetails = () => {
               </div>
               <div className="w-full">
                 <label className="block text-sm font-medium text-gray-600 text-left md:ml-2">
-                  Last Name <span className="text-orange-800">*</span>
+                  Last Name
                 </label>
                 <input
                   id="name"
@@ -41,6 +52,7 @@ const AccountDetails = () => {
               Display name <span className="text-orange-800">*</span>
             </label>
             <input
+              defaultValue={user?.displayName || MDBuser?.name}
               id="email"
               type="email"
               className="mt-1 p-2 w-full border bg-white"
@@ -55,6 +67,7 @@ const AccountDetails = () => {
               Email address <span className="text-orange-800">*</span>
             </label>
             <input
+              defaultValue={user?.email || MDBuser?.email}
               id="email"
               type="email"
               className="mt-1 p-2 w-full border bg-white"

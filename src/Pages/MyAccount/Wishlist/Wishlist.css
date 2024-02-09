@@ -56,14 +56,14 @@
     }
     .wishlistProductImage{
         margin-top: 10px;
-        width: 90%;
-        height: 210px;
+        width: 85%;
+        height: 180px;
     }
 }
 @media only screen and (max-width: 6000px) and (min-width: 1920px)  {
     .wishlistProduct{
         font-size:medium;
-        width: 99%;
+        width: 90%;
         height: 360px; 
         margin-bottom: 10px;
         border: 1px solid;
@@ -71,8 +71,8 @@
     }
     .wishlistProductImage{
         margin-top: 10px;
-        width: 90%;
-        height: 210px;
+        width: 85%;
+        height: 200px;
     }
  
 }

@@ -335,11 +335,12 @@ const CategoriesInfo = () => {
                             </p>
                           </section>
                         ))}
-                        <p className=" text-orange-900 text-start">
-                          {total / 2} Tk
+                        <p className="text-sm text-orange-900 text-start">
+                          {/* {total / 2} .00৳ */}
+                          {total}.00৳
                         </p>
                         <p className="text-xs text-gray-400 text-start">
-                          <span> {cart?.length || 0} </span>Items
+                          {cart?.length || 0} Items
                         </p>
                       </label>
                     </div>

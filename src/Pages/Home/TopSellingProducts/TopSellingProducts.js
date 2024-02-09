@@ -5,11 +5,16 @@ import { useQuery } from "@tanstack/react-query";
 import HomeSingleProduct from "../HomeSingleProduct/HomeSingleProduct";
 
 const TopSellingProducts = () => {
-  const { data: TSproduct = [] } = useQuery({
-    queryKey: ["Shop"],
+  const { data: TSproduct = [], isLoading } = useQuery({
+    queryKey: ["/Shop"],
     queryFn: () =>
-      fetch("http://localhost:4000/Shop").then((res) => res.json()),
+      fetch("https://apon-store-server-gsfwzw8jc-rubelrk.vercel.app/Shop").then(
+        (res) => res.json()
+      ),
   });
+  if (isLoading) {
+    <div>Loading........</div>;
+  }
 
   return (
     <div>

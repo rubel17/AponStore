@@ -3,7 +3,7 @@ import "./Advertisement.css";
 import adv from "../../../assets/image/banner-1.jpg";
 import adv2 from "../../../assets/image/banner-2.jpg";
 import adv3 from "../../../assets/image/banner-3.jpg";
-import adv4 from "../../../assets/image/banner/free Delevery.png";
+import adv4 from "../../../assets/image/banner/rsz_free_delevery.jpg";
 import adv5 from "../../../assets/image/banner/discount.png";
 import adv6 from "../../../assets/image/banner/Order to relax.png";
 import Slider from "react-slick";

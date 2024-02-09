@@ -127,6 +127,7 @@ const ViewCart = () => {
     } else {
       FTotal = i + 40;
     }
+    var orderStatus = "Processing";
     var Product = cart;
     var orderNumber = Math.floor(Math.random() * 9999) + 199999;
     var orderDate = date.toDateString();
@@ -142,6 +143,7 @@ const ViewCart = () => {
         Product,
         orderNumber,
         orderDate,
+        orderStatus,
       };
       fetch(`https://apon-store-server-rubelrk.vercel.app/orders`, {
         method: "POST",

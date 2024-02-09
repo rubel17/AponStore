@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./Banner.css";
 import { Link } from "react-router-dom";
 import PremiumProductIcon from "../../../assets/icon/best seller icon.png";
-import { Bars3Icon } from "@heroicons/react/24/outline";
 import rightArrow from "../../../assets/icon/rightArrow.png";
 import BabyProductIcon from "../../../assets/icon/Diapers.H03.2k.png";
 import DailyProductIcon from "../../../assets/icon/plastic-red-flying-basket-isolated-white-background-empty-shopping-cart-3d-rendering.png";
@@ -12,9 +11,9 @@ import HygieneProductIcon from "../../../assets/icon/different-soap-bars-pump-bo
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import orderToRelax from "../../../assets/image/banner/Order to relax.png";
-import Sotejota from "../../../assets/image/banner/Sotejota.jpg";
+import Sotejota from "../../../assets/image/banner/sotejota.jpeg";
 import discount from "../../../assets/image/banner/discount.png";
-import freeDelivery from "../../../assets/image/banner/free Delevery.png";
+import freeDelivery from "../../../assets/image/banner/rsz_free_delevery.jpg";
 
 const Banner = () => {
   const [isActive, setIsActive] = useState(false);

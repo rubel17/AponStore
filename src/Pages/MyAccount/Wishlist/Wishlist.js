@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Wishlist.css";
 import { Link } from "react-router-dom";
 const rk = [{}];
-console.log(rk.length);
 
 const products = [
   // List of products
@@ -137,39 +136,38 @@ const Wishlist = ({ text = "ACI Pure Chickpea Flour" }) => {
           {/* Display products for the current page */}
           <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4  md:gap-2  2xl:mx-20">
             {productsToShow.map((product) => (
-              <div
-                key={product.id}
-                className="wishlistProduct mx-auto shadow  rounded  hover:bg-gray-100"
-              >
+              <div key={product.id}>
                 <Link
                   to={`/productDetails/${product.id}`}
                   className="bg-white shadow-md overflow-hidden"
                 >
-                  {/* Card Image */}
-                  <div className="relative">
-                    <img
-                      className="wishlistProductImage mx-auto p-1 md:p-3 xl:p-3"
-                      src={product?.img}
-                      alt=""
-                      title="ACI Pure Chickpea Flour"
-                    />
-                    <Link className="text-gray-700 absolute -top-2 left-2 text-sm">
-                      X Remove
-                    </Link>
-                  </div>
-                  {/* Card Content */}
-                  <div className="">
-                    <p className="truncate font-bold">{slicedText}</p>
-                    {/* <h2 className="text-lg font-semibold">{product.name}</h2> */}
-                    <p className="text-gray-400 my-2 xl:my-1">
-                      Daily Needs, Salt
-                    </p>
-                    {/* <p>{product.description}</p> */}
-                    <p className="text-orange-900 mb-3">85.00৳ </p>
-                    <Link className="bg-green-700 hover:bg-green-800 py-3 px-8 text-white font-medium">
-                      Add To Cart
-                    </Link>
-                  </div>
+                  <object className="wishlistProduct mx-auto shadow  rounded  hover:bg-gray-100">
+                    {/* Card Image */}
+                    <div className="relative">
+                      <img
+                        className="wishlistProductImage mx-auto p-1 md:p-3 xl:p-3"
+                        src={product?.img}
+                        alt=""
+                        title="ACI Pure Chickpea Flour"
+                      />
+                      <Link className="text-gray-700 absolute top-0 left-2 text-sm font-semibold">
+                        X Remove
+                      </Link>
+                    </div>
+                    {/* Card Content */}
+                    <div className="">
+                      <p className="truncate font-bold">{slicedText}</p>
+                      {/* <h2 className="text-lg font-semibold">{product.name}</h2> */}
+                      <p className="text-gray-400 my-2 xl:my-1">
+                        Daily Needs, Salt
+                      </p>
+                      {/* <p>{product.description}</p> */}
+                      <p className="text-orange-900 mb-3">85.00৳ </p>
+                      <Link className="bg-green-700 hover:bg-green-800 py-3 px-8 text-white font-medium">
+                        Add To Cart
+                      </Link>
+                    </div>
+                  </object>
                 </Link>
               </div>
             ))}

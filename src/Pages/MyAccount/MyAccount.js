@@ -11,7 +11,6 @@ const MyAccount = () => {
       .then(() => {})
       .catch((error) => console.error(error));
   };
-  console.log(user);
   return (
     <>
       <header className="">
